@@ -1,78 +1,82 @@
-*{
-    margin: 0px;
-    padding: 0px;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
-    background-color: rgba(0, 0, 0, 0.945);
+}
+
+body {
+    background-color: #111;
+    color: white;
+    font-family: Arial, sans-serif;
 }
 
 header {
-    background-color: rgba(0, 0, 0, 0.945);
     display: flex;
-    flex-direction:row;
-    height: 85px;
-    margin-top: 0px;
-    text-align:left;
     align-items: center;
-    justify-content: left;
-    gap: 150px;
-    margin: 0px;
-
+    justify-content: space-between;
+    gap: 20px;
+    padding: 10px 30px;
+    background-color: #080808;
 }
-header p{
+
+
+header p {
     color: white;
-    font-size: 28px;
+    font-size: 22px;
     display: flex;
-    flex-direction: row;
     align-items: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.logo{
-    max-height: 80px;
-}
-
-.moeda{
+.logo {
     max-height: 70px;
-    max-width: 70px;
-    margin-right: 7px;
 }
-small{
+
+.moeda {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+small {
     color: gold;
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-    font-size: 25px;
+    font-size: 24px;
+    margin-left: 5px;
 }
 
-strong{
-    color:white;
-    text-shadow: 10px;
-    size: 30px;
-    font-size: 28px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-}
-
-.barra{
-    font-size: 70px;
+strong {
     color: white;
-    align-items:start;
-    justify-content: center;
+    font-size: 22px;
+}
+
+.barra {
+    font-size: 40px;
+    color: #555;
+}
+
+.menu {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.container {
+    padding: 15px;
 }
 
 .container img {
-    width: 97.5%;
-    height: calc(100vh - 125px);
-    background-color: rgba(0, 0, 0, 0.945);
-    margin: 0 auto;
+    width: 98%;
     display: block;
-    object-fit: cover;
+    margin: 10px auto;
+    border-radius: 10px;
 }
 
-h1{
+h1 {
     justify-content: center;
     display: flex;
     flex-wrap: wrap;
     color: white;
 }
-.secaoum{
+
+.secaoum {
     margin-top: 30px;
     display: flex;
     flex-direction: row;
