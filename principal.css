@@ -74,16 +74,31 @@ h1{
 }
 .secaoum{
     margin-top: 30px;
-    margin-left: 90px;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     gap: 500px;
     background-color: rgba(0, 0, 0, 0.945);
+}
+
+.tecnico{
+    border: 5px solid white;
+    border-radius: 15px;
+    padding: 8px;
+    width: 250px;
+}
+
+.estadio{
+    border: 5px solid white;
+    border-radius: 15px;
+    padding: 8px;
+    width: fit-content;
 }
 
 .secaoum p, h2 {
     color: white;
 }
+
 .upgrades{
     background-color: gray;
 }
@@ -95,6 +110,32 @@ footer {
 .secaoum p,
 .secaoum h2,
 .secaodois p,
-.secaodois h2 {
+.secaodois h2,
+.secaotres p,
+.secaotres h2 {
     color: white;
+}
+
+.secaodois{
+    margin-top: 30px;
+    margin-left: 90px;
+    display: flex;
+    flex-direction: row;
+    gap: 500px;
+    background-color: rgba(0, 0, 0, 0.945);
+}
+
+.secaotres{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.945);
+}
+
+.secaotres p,
+.secaodois p,
+.secaoum p{
+    margin-top: 20px;
+    font-size: 20px;
 }
