@@ -92,4 +92,9 @@ footer {
     visibility: hidden;
 }
 
-
+.secaoum p,
+.secaoum h2,
+.secaodois p,
+.secaodois h2 {
+    color: white;
+}
