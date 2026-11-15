@@ -218,3 +218,38 @@ h1 {
     align-items: center;
     cursor: pointer;
 }
+
+.tecnico p,
+.estadio p,
+.multiplicador p,
+.bolas p {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nivel {
+    font-size: 13px;
+    color: white;
+    background-color: black;
+    padding: 3px 8px;
+    border-radius: 6px;
+}
+
+.preco {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: black;
+}
+
+.moedapreco {
+    width: 20px;
+    height: 20px;
+}
