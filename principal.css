@@ -11,12 +11,15 @@ body {
 }
 
 header {
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     padding: 10px 30px;
     background-color: #080808;
+    position: fixed;
+    width: 100%;
 }
 
 header p {
@@ -58,6 +61,7 @@ strong {
 }
 
 .container {
+    position: relative;
     padding: 15px;
 }
 
@@ -123,6 +127,7 @@ h1 {
 .secaodois h2 {
     color: white;
     font-size: 20px;
+<<<<<<< HEAD
     margin-bottom: 14px;
     padding-bottom: 10px;
     border-bottom: 2px solid #444444;
@@ -197,4 +202,22 @@ h1 {
     .secaodois {
         grid-template-columns: 1fr;
     }
+=======
+}
+
+.areaclick{
+    border-radius: 15px;
+    border: white dashed 5px;
+    left: 200px;
+    bottom: 100px;
+    opacity: 70%;
+    background-color: rgb(204, 202, 202);
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+>>>>>>> 0984391f65bb72d23c3e9d423fc0b49d8f57ed89
 }
