@@ -19,7 +19,6 @@ header {
     background-color: #080808;
 }
 
-
 header p {
     color: white;
     font-size: 22px;
@@ -76,34 +75,12 @@ h1 {
     color: white;
 }
 
-.secaoum {
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 500px;
-    background-color: rgba(0, 0, 0, 0.945);
-}
-
-.tecnico{
-    border: 5px solid white;
-    border-radius: 15px;
-    padding: 8px;
-    width: 250px;
-}
-
-.estadio{
-    border: 5px solid white;
-    border-radius: 15px;
-    padding: 8px;
-    width: fit-content;
-}
-
-.secaoum p, h2 {
+.secaoum p,
+h2 {
     color: white;
 }
 
-.upgrades{
+.upgrades {
     background-color: gray;
 }
 
@@ -111,7 +88,6 @@ footer {
     visibility: hidden;
 }
 
-/* ===== TÍTULO UPGRADES ===== */
 h1 {
     text-align: center;
     letter-spacing: 4px;
@@ -119,7 +95,6 @@ h1 {
     margin-bottom: 20px;
 }
 
-/* ===== GRADES DE UPGRADES ===== */
 .secaoum,
 .secaodois {
     display: grid;
@@ -133,7 +108,6 @@ h1 {
     background-color: transparent;
 }
 
-/* ===== CAIXAS DOS UPGRADES ===== */
 .tecnico,
 .estadio,
 .multiplicador,
@@ -145,35 +119,82 @@ h1 {
     color: white;
 }
 
-/* ===== TÍTULOS DAS CAIXAS ===== */
 .secaoum h2,
-.secaodois p,
-.secaodois h2,
-.secaotres p,
-.secaotres h2 {
+.secaodois h2 {
     color: white;
-}
-
-.secaodois{
-    margin-top: 30px;
-    margin-left: 90px;
-    display: flex;
-    flex-direction: row;
-    gap: 500px;
-    background-color: rgba(0, 0, 0, 0.945);
-}
-
-.secaotres{
-    margin-top: 30px;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    background-color: rgba(0, 0, 0, 0.945);
-}
-
-.secaotres p,
-.secaodois p,
-.secaoum p{
-    margin-top: 20px;
     font-size: 20px;
+    margin-bottom: 14px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #444444;
+}
+
+.tecnico p,
+.estadio p,
+.multiplicador p,
+.bolas p {
+    display: block;
+    color: black;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.tecnico p:hover,
+.estadio p:hover,
+.multiplicador p:hover,
+.bolas p:hover {
+    background-color: #d4a017;
+    transform: scale(1.03);
+}
+
+.jogadores {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    background-color: #1a1a1a;
+    border: 2px solid white;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+.jogadores h2 {
+    width: 100%;
+}
+
+.jogador {
+    width: 140px;
+    height: 180px;
+    display: flex;
+    align-items: flex-end;
+    background-color: white;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+
+.jogador:hover {
+    transform: translateY(-6px);
+}
+
+.jogador p {
+    width: 100%;
+    padding: 8px;
+    color: white;
+    background-color: black;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media (max-width: 700px) {
+    .secaoum,
+    .secaodois {
+        grid-template-columns: 1fr;
+    }
 }
