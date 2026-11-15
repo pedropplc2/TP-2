@@ -236,6 +236,20 @@ h1 {
     object-fit: contain;
 }
 
+.zagueiro {
+    position: absolute;
+    z-index: 2;
+    bottom: 550px;
+    left: 500px;
+}
+
+.zagueiro img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+
 .tecnico p,
 .estadio p,
 .multiplicador p,
