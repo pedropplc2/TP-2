@@ -208,13 +208,17 @@ h1 {
     border: white dashed 5px;
     left: 200px;
     bottom: 100px;
-    opacity: 70%;
-    background-color: rgb(204, 202, 202);
+    background-color: rgb(204, 202, 202, 0.6);
     position: absolute;
-    width: 300px;
+    width: 270px;
     height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
+}
+
+.areaclick img{
+    height: 380px;
+    width: 280px;
 }
