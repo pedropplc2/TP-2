@@ -222,3 +222,16 @@ h1 {
     height: 380px;
     width: 280px;
 }
+
+.goleiro{
+    position: absolute;
+    z-index: 2;
+    right: 140px;
+    bottom: 450px;
+}
+
+.goleiro img{
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
