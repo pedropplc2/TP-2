@@ -11,12 +11,14 @@ body {
 }
 
 header {
+    z-index: 1;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
     padding: 10px 30px;
     background-color: #080808;
+    position: fixed;
 }
 
 
@@ -59,6 +61,7 @@ strong {
 }
 
 .container {
+    position: relative;
     padding: 15px;
 }
 
@@ -176,4 +179,20 @@ h1 {
 .secaoum p{
     margin-top: 20px;
     font-size: 20px;
+}
+
+.areaclick{
+    border-radius: 15px;
+    border: white dashed 5px;
+    left: 200px;
+    bottom: 100px;
+    opacity: 70%;
+    background-color: rgb(204, 202, 202);
+    position: absolute;
+    width: 300px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
 }
