@@ -249,6 +249,31 @@ h1 {
     object-fit: contain;
 }
 
+.meia{
+    position: absolute;
+    z-index: 2;
+    bottom: 400px;
+    left: 900px;
+}
+
+.meia img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
+
+.atacante {
+    position: absolute;
+    z-index: 2;
+    bottom: 500px;
+    right: 450px;
+}
+
+.atacante img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+}
 
 .tecnico p,
 .estadio p,
