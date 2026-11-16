@@ -11,7 +11,11 @@ body {
 }
 
 header {
+<<<<<<< Updated upstream
     z-index: 10;
+=======
+    z-index: 3;
+>>>>>>> Stashed changes
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -64,35 +68,19 @@ small {
     color: #333333;
 }
 .container {
+    padding: 100px 15px 15px;
+}
+
+.campo {
     position: relative;
-    padding: 15px;
-}
-
-.container img {
     width: 98%;
-    display: block;
     margin: 10px auto;
+}
+
+.campo>img {
+    width: 100%;
+    display: block;
     border-radius: 10px;
-}
-
-h1 {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-}
-
-.secaoum p,
-h2 {
-    color: white;
-}
-
-.upgrades {
-    background-color: gray;
-}
-
-footer {
-    visibility: hidden;
 }
 
 h1 {
@@ -139,7 +127,9 @@ h1 {
 .estadio p,
 .multiplicador p,
 .bolas p {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: black;
     background-color: white;
     font-size: 16px;
@@ -199,92 +189,72 @@ h1 {
     font-weight: bold;
 }
 
-@media (max-width: 700px) {
-    .secaoum,
-    .secaodois {
-        grid-template-columns: 1fr;
-    }
-}
-
-.areaclick{
-    border-radius: 15px;
-    border: white dashed 5px;
-    left: 210px;
-    bottom: 120px;
-    background-color: rgb(204, 202, 202, 0.6);
+.areaclick {
     position: absolute;
+    left: 14%;
+    top: 40%;
     width: 270px;
-    height: 400px;
+    height: 350px;
+    border: 5px dashed white;
+    border-radius: 15px;
+    background-color: rgba(204, 202, 202, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.areaclick img{
-    height: 380px;
-    width: 280px;
+.areaclick img {
+    width: 260px;
+    height: 330px;
 }
 
-.goleiro{
+.goleiro {
     position: absolute;
     z-index: 2;
-    right: 140px;
-    bottom: 450px;
+    right: 8%;
+    top: 38%;
 }
 
-.goleiro img{
+.goleiro img {
     width: 90px;
     height: auto;
-    object-fit: contain;
 }
 
 .zagueiro {
     position: absolute;
     z-index: 2;
-    bottom: 550px;
-    left: 500px;
+    left: 69%;
+    top: 49%;
 }
 
 .zagueiro img {
     width: 90px;
     height: auto;
-    object-fit: contain;
 }
 
-.meia{
+.meia {
     position: absolute;
     z-index: 2;
-    bottom: 400px;
-    left: 900px;
+    left: 53%;
+    top: 53%;
 }
 
 .meia img {
     width: 90px;
     height: auto;
-    object-fit: contain;
 }
 
 .atacante {
     position: absolute;
     z-index: 2;
-    bottom: 500px;
-    right: 450px;
+    left: 43%;
+    top: 42%;
 }
 
 .atacante img {
     width: 90px;
     height: auto;
-    object-fit: contain;
-}
-
-.tecnico p,
-.estadio p,
-.multiplicador p,
-.bolas p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
 
 .info {
@@ -311,4 +281,16 @@ h1 {
 .moedapreco {
     width: 24px;
     height: 24px;
+}
+
+footer {
+    visibility: hidden;
+}
+
+@media (max-width: 700px) {
+
+    .secaoum,
+    .secaodois {
+        grid-template-columns: 1fr;
+    }
 }
