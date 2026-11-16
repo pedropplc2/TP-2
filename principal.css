@@ -273,3 +273,34 @@ h1 {
     width: 24px;
     height: 24px;
 }
+
+.zagueiro,
+.meia,
+.atacante {
+    position: absolute;
+    z-index: 2;
+}
+
+.zagueiro img,
+.meia img,
+.atacante img {
+    width: 90px;
+    height: auto;
+    object-fit: contain;
+    margin: 0;
+}
+
+.meia {
+    left: 900px;
+    bottom: 380px;
+}
+
+.zagueiro {
+    left: 28%;
+    bottom: 42%;
+}
+
+.atacante {
+    left: 66%;
+    bottom: 45%;
+}
