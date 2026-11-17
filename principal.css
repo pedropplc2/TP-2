@@ -219,20 +219,6 @@ h1 {
     top: 42%;
 }
 
-.zagueiro {
-    left: 68%;
-    top: 51%;
-}
-
-.meia {
-    left: 53%;
-    top: 48%;
-}
-
-.atacante {
-    left: 40%;
-    top: 39%;
-}
 
 .goleiro img,
 .zagueiro img,
@@ -273,9 +259,11 @@ h1 {
     position: absolute;
     font-size: 2.5vw;
     z-index: 5;
-    transition: 
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition:
         left 0.75s ease-in-out,
-        bottom 0.75s ease-in-out;
+        top 0.75s ease-in-out;
 }
 
 .secaodois {
@@ -292,4 +280,19 @@ h1 {
     .secaodois {
         grid-template-columns: 1fr;
     }
+}
+
+.zagueiro {
+    left: 33%;
+    bottom: 45%;
+}
+
+.meia {
+    left: 50%;
+    bottom: 45%;
+}
+
+.atacante {
+    left: 66%;
+    bottom: 45%;
 }
