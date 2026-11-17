@@ -292,15 +292,24 @@ h1 {
 
 .meia {
     left: 900px;
-    bottom: 380px;
+    bottom: 350px;
 }
 
 .zagueiro {
-    left: 28%;
-    bottom: 42%;
+    left: 510px;
+    bottom: 530px;
 }
 
 .atacante {
-    left: 66%;
-    bottom: 45%;
+    right: 500px;
+    bottom: 520px;
+}
+
+.bola {
+    position: absolute;
+    font-size: 30px;
+    z-index: 5;
+    transition: 
+        left 0.75s ease-in-out,
+        bottom 0.75s ease-in-out;
 }
