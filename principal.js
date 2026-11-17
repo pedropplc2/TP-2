@@ -1,4 +1,3 @@
-
 let moedas = Number(localStorage.getItem("moedas")) || 0;
 let multiplicador = Number(localStorage.getItem("multiplicador")) || 1;
 let bolasPorClique = Number(localStorage.getItem("bolasPorClique")) || 1;
@@ -8,10 +7,14 @@ let container = document.querySelector(".campo");
 let contador = document.querySelector("header small");
 let textoMultiplicador = document.querySelector("header strong");
 
-let upgrades = document.querySelectorAll(".tecnico p, .estadio p, .multiplicador p, .bolas p");
+let zagueiro = document.querySelector(".zagueiro");
+let meia = document.querySelector(".meia");
+let atacante = document.querySelector(".atacante");
 
-let nomes = ["Entrosamento", "Tatico", "Gramado", "Arquibancada", "Gol", "Multiplicador", "Bolas"];
-let precosIniciais = [50, 75, 100, 150, 200, 10, 80];
+let upgrades = document.querySelectorAll(".estadio p, .multiplicador p, .bolas p");
+
+let nomes = ["Estadio", "Multiplicador", "Bolas"];
+let precosIniciais = [100, 10, 80];
 
 let precos = [];
 let niveis = [];
@@ -42,6 +45,15 @@ function atualizarTela() {
     }
 }
 
+// leva a bola até o pé de um jogador, em % do campo
+function moverBola(bola, elemento) {
+    let x = elemento.offsetLeft + elemento.offsetWidth / 2;
+    let y = elemento.offsetTop + elemento.offsetHeight * 0.9;
+
+    bola.style.left = (x / container.offsetWidth * 100) + "%";
+    bola.style.top = (y / container.offsetHeight * 100) + "%";
+}
+
 area.addEventListener("click", function() {
 
     let bola = document.createElement("div");
@@ -49,36 +61,25 @@ area.addEventListener("click", function() {
     bola.classList.add("bola");
     bola.textContent = "⚽";
 
-    bola.style.left = "23%";
-    bola.style.top = "67%";
+    moverBola(bola, area);
 
     container.appendChild(bola);
 
+    let caminho = [zagueiro, meia, atacante];
+
+    for (let i = 0; i < caminho.length; i++) {
+
+        setTimeout(function() {
+            moverBola(bola, caminho[i]);
+        }, 50 + i * 800);
+
+    }
+
+    // chute do atacante pra dentro do gol
     setTimeout(function() {
 
-        bola.style.left = "43%";
+        bola.style.left = "94%";
         bola.style.top = "46%";
-
-    }, 50);
-
-    setTimeout(function() {
-
-        bola.style.left = "56%";
-        bola.style.top = "54%";
-
-    }, 850);
-
-    setTimeout(function() {
-
-        bola.style.left = "71%";
-        bola.style.top = "57%";
-
-    }, 1650);
-
-    setTimeout(function() {
-
-        bola.style.left = "88%";
-        bola.style.top = "47%";
 
         moedas = moedas + bolasPorClique * multiplicador;
 
@@ -89,7 +90,7 @@ area.addEventListener("click", function() {
             bola.remove();
         }, 1300);
 
-    }, 2450);
+    }, 50 + caminho.length * 800);
 
 });
 
@@ -104,11 +105,11 @@ for (let i = 0; i < upgrades.length; i++) {
             niveis[i] = niveis[i] + 1;
             precos[i] = precos[i] + precosIniciais[i];
 
-            if (i == 5) {
+            if (i == 1) {
                 multiplicador = multiplicador + 1;
             }
 
-            if (i == 6) {
+            if (i == 2) {
                 bolasPorClique = bolasPorClique + 1;
             }
 
