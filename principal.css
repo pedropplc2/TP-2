@@ -437,3 +437,19 @@ h1 {
         left 0.75s ease-in-out,
         bottom 0.75s ease-in-out;
 }
+
+.secaodois {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.estadio p:last-child,
+.multiplicador p:last-child,
+.bolas p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 900px) {
+    .secaodois {
+        grid-template-columns: 1fr;
+    }
+}
