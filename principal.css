@@ -206,6 +206,130 @@ h1 {
     }
 }
 
+@media (min-width: 701px) and (max-width: 1024px) {
+    header {
+        padding: 8px 16px;
+        gap: 10px;
+    }
+
+    .logo {
+        max-height: 50px;
+    }
+
+    header > p,
+    strong {
+        font-size: 16px;
+    }
+
+    .moeda {
+        width: 32px;
+        height: 32px;
+    }
+
+    .areaclick {
+        width: 150px;
+        height: 220px;
+        left: 11%;
+        bottom: 12%;
+        border-width: 3px;
+    }
+
+    .areaclick img {
+        width: 140px;
+        height: 200px;
+    }
+
+    .goleiro {
+        right: 6%;
+        bottom: 42%;
+    }
+
+    .goleiro img,
+    .zagueiro img,
+    .meia img,
+    .atacante img {
+        width: 50px;
+    }
+
+    .secaoum,
+    .secaodois {
+        gap: 14px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+
+    .secaoum h2,
+    .secaodois h2 {
+        font-size: 17px;
+    }
+
+    .tecnico p,
+    .estadio p,
+    .multiplicador p,
+    .bolas p {
+        font-size: 14px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .areaclick {
+        width: 210px;
+        height: 310px;
+        left: 11%;
+        bottom: 12%;
+    }
+
+    .areaclick img {
+        width: 200px;
+        height: 290px;
+    }
+
+    .goleiro {
+        right: 7%;
+        bottom: 44%;
+    }
+
+    .goleiro img,
+    .zagueiro img,
+    .meia img,
+    .atacante img {
+        width: 70px;
+    }
+}
+
+@media (min-width: 2000px) {
+    .areaclick {
+        width: 340px;
+        height: 500px;
+        left: 11%;
+        bottom: 12%;
+    }
+
+    .areaclick img {
+        width: 320px;
+        height: 470px;
+    }
+
+    .goleiro {
+        right: 7%;
+        bottom: 44%;
+    }
+
+    .goleiro img,
+    .zagueiro img,
+    .meia img,
+    .atacante img {
+        width: 120px;
+    }
+
+    .secaoum,
+    .secaodois {
+        max-width: 1800px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
 .areaclick{
     border-radius: 15px;
     border: white dashed 5px;
