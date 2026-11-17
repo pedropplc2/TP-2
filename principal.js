@@ -45,7 +45,7 @@ function atualizarTela() {
     }
 }
 
-// leva a bola até o pé de um jogador, em % do campo
+
 function moverBola(bola, elemento) {
     let x = elemento.offsetLeft + elemento.offsetWidth / 2;
     let y = elemento.offsetTop + elemento.offsetHeight * 0.9;
@@ -75,7 +75,7 @@ area.addEventListener("click", function() {
 
     }
 
-    // chute do atacante pra dentro do gol
+
     setTimeout(function() {
 
         bola.style.left = "94%";
