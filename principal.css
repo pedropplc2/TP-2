@@ -267,7 +267,7 @@ h1 {
 }
 
 .secaodois {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr;
 }
 
 .estadio p:last-child,
