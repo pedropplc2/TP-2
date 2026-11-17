@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -63,36 +64,21 @@ small {
 .barra {
     color: #333333;
 }
+
 .container {
+    padding: 100px 15px 15px;
+}
+
+.campo {
     position: relative;
-    padding: 15px;
-}
-
-.container img {
     width: 98%;
-    display: block;
     margin: 10px auto;
+}
+
+.campo > img {
+    width: 100%;
+    display: block;
     border-radius: 10px;
-}
-
-h1 {
-    justify-content: center;
-    display: flex;
-    flex-wrap: wrap;
-    color: white;
-}
-
-.secaoum p,
-h2 {
-    color: white;
-}
-
-.upgrades {
-    background-color: gray;
-}
-
-footer {
-    visibility: hidden;
 }
 
 h1 {
@@ -107,12 +93,9 @@ h1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    margin-top: 0;
-    margin-left: 0;
     margin-bottom: 20px;
     padding-left: 24px;
     padding-right: 24px;
-    background-color: transparent;
 }
 
 .tecnico,
@@ -139,7 +122,9 @@ h1 {
 .estadio p,
 .multiplicador p,
 .bolas p {
-    display: block;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     color: black;
     background-color: white;
     font-size: 16px;
@@ -199,177 +184,63 @@ h1 {
     font-weight: bold;
 }
 
-@media (max-width: 700px) {
-    .secaoum,
-    .secaodois {
-        grid-template-columns: 1fr;
-    }
-}
-
-@media (min-width: 701px) and (max-width: 1024px) {
-    header {
-        padding: 8px 16px;
-        gap: 10px;
-    }
-
-    .logo {
-        max-height: 50px;
-    }
-
-    header > p,
-    strong {
-        font-size: 16px;
-    }
-
-    .moeda {
-        width: 32px;
-        height: 32px;
-    }
-
-    .areaclick {
-        width: 150px;
-        height: 220px;
-        left: 11%;
-        bottom: 12%;
-        border-width: 3px;
-    }
-
-    .areaclick img {
-        width: 140px;
-        height: 200px;
-    }
-
-    .goleiro {
-        right: 6%;
-        bottom: 42%;
-    }
-
-    .goleiro img,
-    .zagueiro img,
-    .meia img,
-    .atacante img {
-        width: 50px;
-    }
-
-    .secaoum,
-    .secaodois {
-        gap: 14px;
-        padding-left: 14px;
-        padding-right: 14px;
-    }
-
-    .secaoum h2,
-    .secaodois h2 {
-        font-size: 17px;
-    }
-
-    .tecnico p,
-    .estadio p,
-    .multiplicador p,
-    .bolas p {
-        font-size: 14px;
-    }
-}
-
-@media (min-width: 1025px) and (max-width: 1440px) {
-    .areaclick {
-        width: 210px;
-        height: 310px;
-        left: 11%;
-        bottom: 12%;
-    }
-
-    .areaclick img {
-        width: 200px;
-        height: 290px;
-    }
-
-    .goleiro {
-        right: 7%;
-        bottom: 44%;
-    }
-
-    .goleiro img,
-    .zagueiro img,
-    .meia img,
-    .atacante img {
-        width: 70px;
-    }
-}
-
-@media (min-width: 2000px) {
-    .areaclick {
-        width: 340px;
-        height: 500px;
-        left: 11%;
-        bottom: 12%;
-    }
-
-    .areaclick img {
-        width: 320px;
-        height: 470px;
-    }
-
-    .goleiro {
-        right: 7%;
-        bottom: 44%;
-    }
-
-    .goleiro img,
-    .zagueiro img,
-    .meia img,
-    .atacante img {
-        width: 120px;
-    }
-
-    .secaoum,
-    .secaodois {
-        max-width: 1800px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-}
-
-.areaclick{
-    border-radius: 15px;
-    border: white dashed 5px;
-    left: 210px;
-    bottom: 120px;
-    background-color: rgb(204, 202, 202, 0.6);
+.areaclick {
     position: absolute;
-    width: 270px;
-    height: 400px;
+    left: 11%;
+    top: 43%;
+    width: 17%;
+    height: 39%;
+    border: 4px dashed white;
+    border-radius: 15px;
+    background-color: rgba(204, 202, 202, 0.6);
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
 }
 
-.areaclick img{
-    height: 380px;
-    width: 280px;
-}
-
-.goleiro{
-    position: absolute;
-    z-index: 2;
-    right: 140px;
-    bottom: 450px;
-}
-
-.goleiro img{
-    width: 90px;
-    height: auto;
+.areaclick img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
 }
 
-.tecnico p,
-.estadio p,
-.multiplicador p,
-.bolas p {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.goleiro,
+.zagueiro,
+.meia,
+.atacante {
+    position: absolute;
+    width: 6%;
+    z-index: 2;
+}
+
+.goleiro {
+    left: 85%;
+    top: 42%;
+}
+
+.zagueiro {
+    left: 68%;
+    top: 51%;
+}
+
+.meia {
+    left: 53%;
+    top: 48%;
+}
+
+.atacante {
+    left: 40%;
+    top: 39%;
+}
+
+.goleiro img,
+.zagueiro img,
+.meia img,
+.atacante img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .info {
@@ -398,40 +269,9 @@ h1 {
     height: 24px;
 }
 
-.zagueiro,
-.meia,
-.atacante {
-    position: absolute;
-    z-index: 2;
-}
-
-.zagueiro img,
-.meia img,
-.atacante img {
-    width: 90px;
-    height: auto;
-    object-fit: contain;
-    margin: 0;
-}
-
-.meia {
-    left: 900px;
-    bottom: 350px;
-}
-
-.zagueiro {
-    left: 510px;
-    bottom: 530px;
-}
-
-.atacante {
-    right: 500px;
-    bottom: 520px;
-}
-
 .bola {
     position: absolute;
-    font-size: 30px;
+    font-size: 2.5vw;
     z-index: 5;
     transition: 
         left 0.75s ease-in-out,
