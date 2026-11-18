@@ -11,10 +11,10 @@ let zagueiro = document.querySelector(".zagueiro");
 let meia = document.querySelector(".meia");
 let atacante = document.querySelector(".atacante");
 
-let upgrades = document.querySelectorAll(".estadio p, .multiplicador p, .bolas p");
+let upgrades = document.querySelectorAll(".multiplicador p, .bolas p");
 
-let nomes = ["Estadio", "Multiplicador", "Bolas"];
-let precosIniciais = [100, 10, 80];
+let nomes = ["Multiplicador", "Bolas"];
+let precosIniciais = [10, 80];
 
 let precos = [];
 let niveis = [];
@@ -45,7 +45,7 @@ function atualizarTela() {
     }
 }
 
-// leva a bola até o pé de um jogador, em % do campo
+
 function moverBola(bola, elemento) {
     let x = elemento.offsetLeft + elemento.offsetWidth / 2;
     let y = elemento.offsetTop + elemento.offsetHeight * 0.9;
@@ -75,7 +75,7 @@ area.addEventListener("click", function() {
 
     }
 
-    // chute do atacante pra dentro do gol
+
     setTimeout(function() {
 
         bola.style.left = "94%";
@@ -105,11 +105,11 @@ for (let i = 0; i < upgrades.length; i++) {
             niveis[i] = niveis[i] + 1;
             precos[i] = precos[i] + precosIniciais[i];
 
-            if (i == 1) {
+            if (i == 0) {
                 multiplicador = multiplicador + 1;
             }
 
-            if (i == 2) {
+            if (i == 1) {
                 bolasPorClique = bolasPorClique + 1;
             }
 
